@@ -7,8 +7,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Add compiler warnings to catch bugs early
+# Add compiler warnings to catch bugs early
 if(MSVC)
     add_compile_options(/W4)
+    add_compile_definitions(_CRT_SECURE_NO_WARNINGS) # <--- ADD THIS LINE
 else()
     add_compile_options(-Wall -Wextra -pedantic -O3)
 endif()

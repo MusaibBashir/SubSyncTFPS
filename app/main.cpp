@@ -9,7 +9,7 @@
 // alass-cpp Engine Headers
 #include "alass/audio_tap.hpp"
 #include "alass/srt_parser.hpp"
-#include "alass/fft_math.hpp"
+#include "alass/alass_math.hpp"
 
 int main(int argc, char** argv) {
     CLI::App app{"alass-cpp: Blazing Fast Subtitle Synchronization"};

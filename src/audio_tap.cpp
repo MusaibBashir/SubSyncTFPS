@@ -43,7 +43,7 @@ namespace alass {
         std::vector<float> pcm(max_samples, 0.0f);
         
         size_t samples_read = std::fread(pcm.data(), sizeof(float), max_samples, pipe);
-        int exit_code = PCLOSE(pipe);
+        PCLOSE(pipe);
 
         if (samples_read < static_cast<size_t>(sample_rate * 5)) {
             throw std::runtime_error("FFmpeg returned insufficient audio data. The file might be too short or broken.");
