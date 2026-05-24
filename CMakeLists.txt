@@ -17,11 +17,10 @@ endif()
 include_directories(${CMAKE_SOURCE_DIR}/include)
 include_directories(${CMAKE_SOURCE_DIR}/third_party)
 
-# For now, we will compile everything into a single executable
-# As we build the src/ files, we will add them here
+# Compile everything into the executable
 add_executable(alass-cpp 
     app/main.cpp
     src/audio_tap.cpp
     src/srt_parser.cpp
-    src/fft_math.cpp
+    src/alass_math.cpp
 )
